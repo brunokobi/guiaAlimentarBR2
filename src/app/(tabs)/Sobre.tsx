@@ -13,9 +13,10 @@ function Sobre({ navigation }) {
   return (
     <>
       <View style={styles.container2}>
-        <Text style={styles.titulo}> Autora do Aplicativo </Text>
-        <Text style={styles.texto}> Rafaela Soares Souza Kobi </Text>
-        <Text style={styles.texto}> Nutricionista </Text>
+        <Text style={styles.titulo}> 🍎🍇🍌 Autora do Aplicativo 🥔🥦🍆 </Text>
+        <Text style={styles.texto}>🥕 Nutricionista 🍅</Text>
+        <Text style={styles.texto}>🍉 Rafaela Soares Souza Kobi 🍍</Text>
+
         <Image source={require("../../assets/rafa.gif")} style={styles.logo1} />
         <Text style={styles.texto2}>
           {"   "} Eu sou Rafaela Soares Souza Kobi, nutricionista, e desenvolvi
@@ -29,7 +30,8 @@ function Sobre({ navigation }) {
           sobre Alimentação e Nutrição, durante a feira Nutri Saber.
         </Text>
 
-        <View style={{ flexDirection: "row" }}>
+        <Text style={styles.texto1}>Redes Sociais</Text>
+        <View style={{ flexDirection: "row", marginTop: -10 }}>
           <TouchableOpacity
             onPress={() => Linking.openURL("https://rafanutri.netlify.app/")}
           >
@@ -39,9 +41,10 @@ function Sobre({ navigation }) {
               alt="Site"
             />
           </TouchableOpacity>
+
           <TouchableOpacity
             onPress={() =>
-              Linking.openURL("https://www.instagram.com/ra.faela820/")
+              Linking.openURL("https://www.instagram.com/nutri_rafaelasskobi/")
             }
           >
             <Image
@@ -59,22 +62,13 @@ function Sobre({ navigation }) {
           >
             <Image
               source={require("../../assets/link.png")}
-              style={styles.logo3}
+              style={styles.logo5}
               alt="Linkedin"
             />
           </TouchableOpacity>
         </View>
-        <Text style={styles.texto1}>
-          Professor Coordenador:{"\n"}
-          Mírian Patrícia Castro Pereira Paixão{"\n"}Docente de Nutrição
-          (UniSales Oficial)
-        </Text>
+        <Text style={styles.texto1}></Text>
         <Text></Text>
-        {/* </View>
-
-        <View style={styles.container}>
-          <Text style={styles.titulo}> Centro Universitário Salesiano (UniSales) </Text> 
-        <Image source={require('../../assets/logo.png')} style={styles.logo2} />   */}
       </View>
 
       <View style={styles.container1}>
@@ -87,12 +81,12 @@ function Sobre({ navigation }) {
           source={require("../../assets/bruno.gif")}
           style={styles.logo3}
         />
-        <Text style={styles.texto1}>
+        <Text style={styles.texto3}>
           Desenvolvido{"\n"}
           Bruno Kobi Valadares de Amorim{"\n"}
-          Mestrando em Computação Aplicada em IA (IFES){"\n"}
-          Versão 3.0 - 2023
+          Mestrando em Computação Aplicada em IA (IFES)
         </Text>
+        <Text style={styles.texto4}>Versão 3.0 - 2023</Text>
       </View>
 
       <View style={styles.container3}>
@@ -110,35 +104,34 @@ function Sobre({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex:1,
-  //   backgroundColor: '#dcf19b',
-  //   alignItems: "center",
-  //   justifyContent: "flex-start",
-  // },
   container1: {
     flex: 1,
     backgroundColor: "#c6f2fc",
+    justifyContent: "flex-start",
     alignItems: "center",
-    justifyContent: "flex-end",
+    height: 200,
+    // justifyContent: "flex-end",
   },
 
-  container: {
-    flex: 1,
-    backgroundColor: "#c6f2fc",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    marginTop: 100,
-  },
   container2: {
-    flex: 2,
+    flex: 3,
     backgroundColor: "#c6f2fc",
     alignItems: "center",
     justifyContent: "flex-start",
+  },
+
+  container3: {
+    flexDirection: "row",
+    backgroundColor: "#4fb8ce",
+    alignItems: "center",
+    justifyContent: "center",
+    height: 45,
   },
   titulo: {
     textAlign: "center",
-    marginTop: 2,
+    paddingBottom: 2,
+    paddingTop: 2,
+    marginTop: 10,
     fontSize: 20,
     fontWeight: "bold",
     marginLeft: 5,
@@ -146,19 +139,21 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     height: "auto",
     width: "auto",
-    backgroundColor: "#3b5998",
+    backgroundColor: "#4fb8ce",
     borderRadius: 10,
-    borderColor: "black",
-    borderTopWidth: 2,
-    borderLeftWidth: 2,
-    borderRightWidth: 5,
-    borderBottomWidth: 5,
+    //borda  gray light
+    borderColor: "#fff",
+
+    borderTopWidth: 1,
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
     color: "#fff",
   },
 
   titulo1: {
     textAlign: "justify",
-    marginTop: 0,
+    marginTop: 5,
     fontSize: 18,
     marginLeft: 5,
     marginRight: 2,
@@ -183,18 +178,27 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
+  texto3: {
+    fontSize: 10,
+    margin: 5,
+    textAlign: "center",
+    fontWeight: "bold",
+    // marginBottom: 20,
+  },
+
+  texto4: {
+    fontSize: 14,
+    margin: 5,
+    textAlign: "center",
+    color: "#4fb8ce",
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+
   texto2: {
     fontSize: 14,
     margin: 10,
     textAlign: "justify",
-  },
-
-  container3: {
-    flexDirection: "row",
-    backgroundColor: "#4fb8ce",
-    alignItems: "center",
-    justifyContent: "center",
-    height: 45,
   },
 
   logo: {
@@ -211,14 +215,19 @@ const styles = StyleSheet.create({
     // marginBottom: 20,
   },
   logo3: {
-    width: 70,
-    height: 60,
+    width: 45,
+    height: 45,
     marginTop: 0,
     // marginBottom: 20,
   },
+  logo5: {
+    width: 55,
+    height: 50,
+    marginTop: -2,
+  },
   logo4: {
-    width: 70,
-    height: 60,
+    width: 55,
+    height: 45,
     resizeMode: "contain",
     marginTop: -2,
     // marginBottom: 20,
