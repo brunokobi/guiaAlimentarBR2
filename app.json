@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Guia Alimentar BR",
+    "slug": "guiaalimentarbr",
+    "privacy": "public",
+    "scheme": "guiaalimentar",
+    "version": "3.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.guiaalimentar.guiaalimentarbr",
+      "versionCode": 9,
+      "permissions": [],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": ["expo-router"],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a896cb8f-8d80-4de0-9501-525479d2482e"
+      }
+    }
+  }
+}
